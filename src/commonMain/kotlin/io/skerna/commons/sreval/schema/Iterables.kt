@@ -1,7 +1,7 @@
-package io.skerna.reval.jsonschema
+package io.skerna.commons.sreval.schema
 
-import io.skerna.reval.Constraint
-import io.skerna.reval.ValidationBuilder
+import io.skerna.commons.sreval.Constraint
+import io.skerna.commons.sreval.ValidationBuilder
 
 
 inline fun <reified T> ValidationBuilder<T>.minItems(minSize: Int): Constraint<T> = addConstraint(

@@ -1,5 +1,7 @@
-package io.skerna.reval
+package io.skerna.commons.sreval
 
+import io.skerna.commons.sreval.Constraint
+import io.skerna.commons.sreval.Validation
 import kotlin.reflect.KProperty1
 
 // FIXME: Remove once JvmName is available in JS projects

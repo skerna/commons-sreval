@@ -1,8 +1,7 @@
-package io.skerna.reval
+package io.skerna.commons.sreval
 
-import io.skerna.reval.Validation
-import io.skerna.reval.jsonschema.flexRequired
-import io.skerna.reval.jsonschema.inCollection
+import io.skerna.commons.sreval.schema.flexRequired
+import io.skerna.commons.sreval.schema.inCollection
 
 
 // FIXME: Remove once JvmName is available in JS projects

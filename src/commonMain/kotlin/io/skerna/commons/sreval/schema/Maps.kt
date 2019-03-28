@@ -1,7 +1,7 @@
-package io.skerna.reval.jsonschema
+package io.skerna.commons.sreval.schema
 
-import io.skerna.reval.Constraint
-import io.skerna.reval.ValidationBuilder
+import io.skerna.commons.sreval.Constraint
+import io.skerna.commons.sreval.ValidationBuilder
 
 inline fun <reified T: Map<*, *>> ValidationBuilder<T>.minProperties(minSize: Int): Constraint<T> =
     minItems(minSize) hint "must have at least {0} properties"

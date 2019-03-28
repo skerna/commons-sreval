@@ -1,10 +1,6 @@
-package io.skerna.reval.internal
+package io.skerna.commons.sreval.impl
 
-import io.skerna.reval.Constraint
-import io.skerna.reval.Invalid
-import io.skerna.reval.Valid
-import io.skerna.reval.Validation
-import io.skerna.reval.ValidationResult
+import io.skerna.commons.sreval.*
 import kotlin.reflect.KProperty1
 
 internal class NonNullPropertyValidation<T, R>(
@@ -40,9 +36,9 @@ internal class RequiredPropertyValidation<T, R>(
 
 
 internal class NonNullSelfPropertyValidation<T, R,K>(
-    private val name:K,
-    private val validation: Validation<R>,
-    private val self:(K,T)->R
+        private val name:K,
+        private val validation: Validation<R>,
+        private val self:(K,T)->R
 ) : Validation<T> {
     val keyAsStr = name.toString()
 
@@ -56,9 +52,9 @@ internal class NonNullSelfPropertyValidation<T, R,K>(
 }
 
 internal class OptionalSelfValidation<T, R,K>(
-    private val property: K,
-    private val validation: Validation<R>,
-    private val self:(K,T)->R
+        private val property: K,
+        private val validation: Validation<R>,
+        private val self:(K,T)->R
 ) : Validation<T> {
     val keyAsStr = property.toString()
 
@@ -70,9 +66,9 @@ internal class OptionalSelfValidation<T, R,K>(
 }
 
 internal class RequiredSelfValidation<T, R,K>(
-    private val property: K,
-    private val validation: Validation<R>,
-    private val self:(K,T)->R
+        private val property: K,
+        private val validation: Validation<R>,
+        private val self:(K,T)->R
 ) : Validation<T> {
     val keyAsStr = property.toString()
 
@@ -123,8 +119,8 @@ internal class MapValidation<K, V>(
 }
 
 internal class ValidationNode<T>(
-    private val constraints: List<Constraint<T>>,
-    private val subValidations: List<Validation<T>>
+        private val constraints: List<Constraint<T>>,
+        private val subValidations: List<Validation<T>>
 ) : Validation<T> {
     override fun validate(value: T): ValidationResult<T> {
         val subValidationResult = applySubValidations(value, keyTransform = { it })

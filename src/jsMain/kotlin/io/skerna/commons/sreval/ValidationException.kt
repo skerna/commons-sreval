@@ -1,9 +1,6 @@
-package io.skerna.reval
-
+package io.skerna.commons.sreval
 
 actual class ValidationException actual constructor(val invalid: Invalid<*>) : RuntimeException() {
-
-
 
     override val message: String?
         get() = "Validation ended with error codes" +  invalid.getErrors().toString()
@@ -24,4 +21,5 @@ actual class ValidationException actual constructor(val invalid: Invalid<*>) : R
     override fun hashCode(): Int {
         return invalid.hashCode()
     }
+
 }

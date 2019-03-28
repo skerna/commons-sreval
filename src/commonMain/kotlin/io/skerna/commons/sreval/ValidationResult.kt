@@ -1,4 +1,4 @@
-package io.skerna.reval
+package io.skerna.commons.sreval
 
 import kotlin.reflect.KProperty1
 

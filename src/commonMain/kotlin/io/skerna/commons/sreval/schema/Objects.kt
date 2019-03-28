@@ -1,6 +1,6 @@
-package io.skerna.reval.jsonschema
+package io.skerna.commons.sreval.schema
 
-import io.skerna.reval.ValidationBuilder
+import io.skerna.commons.sreval.ValidationBuilder
 
 
 fun <T> ValidationBuilder<T>.const(expected: T) =

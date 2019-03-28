@@ -1,9 +1,9 @@
-package io.skerna.reval.internal
+package io.skerna.commons.sreval.impl
 
-import io.skerna.reval.Constraint
-import io.skerna.reval.Validation
-import io.skerna.reval.ValidationBuilder
-import io.skerna.reval.internal.ValidationBuilderImpl.Companion.PropModifier.*
+import io.skerna.commons.sreval.Constraint
+import io.skerna.commons.sreval.Validation
+import io.skerna.commons.sreval.ValidationBuilder
+import io.skerna.commons.sreval.impl.ValidationBuilderImpl.Companion.PropModifier.*
 import kotlin.collections.Map.Entry
 import kotlin.reflect.KProperty1
 

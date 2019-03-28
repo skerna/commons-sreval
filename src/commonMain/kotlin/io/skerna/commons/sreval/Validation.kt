@@ -1,6 +1,6 @@
-package io.skerna.reval
+package io.skerna.commons.sreval
 
-import io.skerna.reval.internal.ValidationBuilderImpl
+import io.skerna.commons.sreval.impl.ValidationBuilderImpl
 
 
 interface Validation<T> {
