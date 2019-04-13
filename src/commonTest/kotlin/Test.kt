@@ -1,5 +1,7 @@
 import io.skerna.commons.sreval.Validation
-import io.skerna.reval.ValidationException
+import io.skerna.commons.sreval.ValidationException
+import io.skerna.commons.sreval.schema.email
+import io.skerna.commons.sreval.schema.minLength
 import kotlin.test.Test
 import kotlin.test.assertFailsWith
 
@@ -24,4 +26,5 @@ class Test{
             validation.validate(person).ifContaintsProblemsThrow()
         }
     }
+
 }
